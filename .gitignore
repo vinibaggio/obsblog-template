@@ -1,0 +1,11 @@
+# OS files
+# 
+.DS_Store
+
+#
+# hugo build artifacts
+#
+hugoroot/content/posts
+hugoroot/public
+hugoroot/resources/_gen/
+hugoroot/.hugo_build.lock
