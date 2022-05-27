@@ -10,9 +10,8 @@ Yes, fork this repo.
 
 ### Prepare your Hugo blog
 
-You can either use the same Hugo setup I have or you can blow it up and move or start
-a new hugo blog from scratch there. To do that, create a new hugo blog by following the instructions on their website: https://gohugo.io/getting-started/quick-start/ or import your hugo blog into `hugoroot`.
-Note that this script will overwrite some files that are needed to render links and images properly. Read more here:
+Either create a new hugo blog by following the instructions on their website: https://gohugo.io/getting-started/quick-start/ or import your hugo blog into `hugoroot`.
+Note that this script will overwrite some files that are needed to render links and images properly. Read more here why:
 
 https://github.com/zoni/obsidian-export/#relative-links-with-hugo
 
@@ -60,7 +59,7 @@ This template is inserted on top of the posts that I want to render into a blog.
 Push all your changes to a git repo. I use Netlify to deploy the blog. I:
 
 1. Link my fork of this repo as a Netlify project
-1. Add a Deploy Key to my Obsidian vault so Netlify can check it out
+1. Add a Deploy Key to my Obsidian vault's repo so Netlify can download it
 1. Trigger a deploy. Hopefully things will be super smooth!
 
 
@@ -80,3 +79,5 @@ jobs:
       - name: Curl request
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/12345
 ```
+
+Boom! Whenever Obsidian Git pushes the changes, your blog will be updated right after.
